@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Boilerplate from './components/Boilerplate';
+import CvRender from './components/Cv';
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +11,9 @@ class App extends Component {
   render() {
     return(
       <div>
-        
+        <Boilerplate/>
+
+        <CvRender/>
       </div>
     )
   }

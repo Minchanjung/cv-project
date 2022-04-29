@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Form from './Forms';
 
 class Boilerplate extends Component {
     constructor(props) {
@@ -8,9 +9,11 @@ class Boilerplate extends Component {
 
     render() {
         return (
-            <div>
-                
+            <div id="formContainer">
+                <Form/>
             </div>
         )
     }
 }
+
+export default Boilerplate;
