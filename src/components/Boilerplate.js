@@ -4,9 +4,6 @@ import WorkForm from './WorkForm';
 import '../styles/Boilerplate.css';
 
 class Boilerplate extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (

@@ -3,27 +3,6 @@ import Inputs from './Input';
 //import uniqid from 'uniqid';
 
 class Form extends Component {
-    constructor(props) {
-        super(props);
-
-        /*this.state = {
-            name: '', 
-            title: '', 
-            phone: '', 
-            email: '', 
-            location: '', 
-            description: '',
-        }*/
-
-        //this.handleChange = this.handleChange.bind(this);
-    }
-
-    /*handleChange = (e) => {
-        console.log(e.target)
-        this.setState({
-            [e.target.id]: e.target.value,
-        });
-    }*/
 
     render() {
         return (
