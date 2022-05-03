@@ -1,53 +1,41 @@
 import React, { Component } from 'react';
-import uniqid from 'uniqid';
+import Inputs from './Input';
+//import uniqid from 'uniqid';
 
 class Form extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            task: {text: '', id: uniqid()},
-            tasks: [],
-        }
+        /*this.state = {
+            name: '', 
+            title: '', 
+            phone: '', 
+            email: '', 
+            location: '', 
+            description: '',
+        }*/
+
+        //this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange = (e) => {
+    /*handleChange = (e) => {
+        console.log(e.target)
         this.setState({
-            task: {
-                text: e.target.value,
-                id: this.state.task.id
-            }
+            [e.target.id]: e.target.value,
         });
-    }
-
-    onSubmitTask = (e) => {
-        e.preventDefault();
-        this.setState({
-            tasks: this.state.tasks.concat(this.state.task)
-        });
-    }
+    }*/
 
     render() {
         return (
-            <form onSubmit={this.onSubmitTask}>
-                <Inputs taskInput="nameInput" label="Full Name" changeFunc={this.handleChange} value={this.task.text}/>
-                <button className='submitBtn' type="submit">Add</button>
+            <form>
+                <Inputs id="name" class="nameInput" label="Full Name: " handleOnChange={this.props.onInputChange} val={this.props.rootState.personalDetails.name}/>
+                <Inputs id="title" class="titleInput" label="Title: " handleOnChange={this.props.onInputChange} val={this.props.rootState.personalDetails.title}/>
+                <Inputs id="phone" class="phoneInput" label="Phone: " handleOnChange={this.props.onInputChange} val={this.props.rootState.personalDetails.phone}/>
+                <Inputs id="email" class="emailInput" label="Email: " handleOnChange={this.props.onInputChange} val={this.props.rootState.personalDetails.email}/>
+                <Inputs id="location" class="locationInput" label="Location: " handleOnChange={this.props.onInputChange} val={this.props.rootState.personalDetails.location}/>
+                <label htmlFor="description">Description: </label>
+                <textarea id="description" className="descriptionInput" onChange={this.props.onInputChange} value={this.props.rootState.personalDetails.description}></textarea>
             </form>
-        )
-    }
-}
-
-class Inputs extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div>
-                <label htmlFor={this.props.taskInput}>{this.props.label}</label>
-                <input id={this.props.taskInput} onChange={this.props.changeFunc} value={this.props.value} type='text'></input>
-            </div>
         )
     }
 }
