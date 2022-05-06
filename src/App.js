@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Boilerplate from './components/Boilerplate';
 import CvRender from './components/Cv';
+import uniqid from 'uniqid';
 
 class App extends Component {
   constructor(props) {
@@ -57,8 +58,26 @@ class App extends Component {
     };
   };
 
-  onClickRender = () => {
-    
+  onClickRenderWork = () => {
+
+  }
+
+  handleExperienceItemAdd = () => {
+    const id = uniqid();
+    this.setState((prevState) => ({
+      ...prevState,
+      experience: [
+        prevState.experience, 
+        {
+          id, 
+          position: '', 
+          company: '', 
+          startDate: '', 
+          endDate: '', 
+          workDescription: '', 
+        }
+      ]
+    }))
   }
 
   render() {

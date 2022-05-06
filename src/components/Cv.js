@@ -22,7 +22,7 @@ class CvRender extends Component {
                 </div>
                 <h2 id="workExperience">Work Experience</h2>
                 <div id="workContainer">
-                    <WorkRender/>
+                    <WorkRender rootState={this.props.rootState}/>
                 </div>
             </div>
         )

@@ -11,6 +11,7 @@ class WorkForm extends Component {
                 <Inputs id="startDate" class="startDateInput" label="Start Date:  " handleOnChange={this.props.onInputChange('experience', 0)} val={this.props.rootState.experience.map((item) => (item.startDate))}/>
                 <Inputs id="endDate" class="endDateInput" label="End Date:  " handleOnChange={this.props.onInputChange('experience', 0)} val={this.props.rootState.experience.map((item) => (item.endDate))}/>
                 <Inputs id="workDescription" class="workDescriptionInput" label="Description:  " handleOnChange={this.props.onInputChange('experience', 0)} val={this.props.rootState.experience.map((item) => (item.workDescription))}/>
+                <button>delete</button>
             </form>
         )
     };

@@ -15,7 +15,7 @@ class Boilerplate extends Component {
                     <WorkForm onInputChange={this.props.onInputChange} rootState={this.props.rootState}/>
                 </div>
                 
-                <button id="newWorkTemplate"></button>
+                <button id="newWorkTemplate">Add</button>
             </div>
         )
     }
