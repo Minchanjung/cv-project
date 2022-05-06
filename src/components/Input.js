@@ -6,7 +6,7 @@ class Inputs extends Component {
         return (
             <div>
                 <label htmlFor={this.props.id}>{this.props.label}</label>
-                <input id={this.props.id} className={this.props.class} onChange={this.props.handleOnChange} value={this.props.val} type='text'></input>
+                <input name={this.props.name} id={this.props.id} className={this.props.class} onChange={this.props.handleOnChange} value={this.props.val} type='text'></input>
             </div>
         )
     }

@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 class EducationRender extends Component {
     render() {
         return (
-            <div id="workInfoContainer">
-                <div id="workHeader">
-                    <div id="position">{this.props.rootState.education.map((item) => (item.course))}</div>
+            <div id="educationInfoContainer">
+                <div id="educationInfo">
+                    <div id="courseRender">{this.props.rootState.education.map((item) => (item.course))}</div>
                     <div id="right">
-                        <div id="company">{this.props.rootState.education.map((item) => (item.university))} | </div>
-                        <div id="time">
+                        <div id="universityRender">{this.props.rootState.education.map((item) => (item.university))} | </div>
+                        <div id="educationTimeRender">
                             {this.props.rootState.education.map((item) => (item.startDate))} - {this.props.rootState.experience.map((item) => (item.endDate))}
                         </div>
                     </div>
                 </div>
-                <div id="mainBody">{this.props.rootState.education.map((item) => (item.educationDescription))}</div>
+                <div id="EducationBody">{this.props.rootState.education.map((item) => (item.educationDescription))}</div>
             </div>
         )
     }

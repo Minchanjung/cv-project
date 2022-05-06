@@ -9,8 +9,11 @@ class CvRender extends Component {
         return (
             <div id="cvContainer">
                 <div id="header">
-                    <h1 id="name">{this.props.rootState.personalDetails.name}</h1>
-                    <h2 id="jobTitle">{this.props.rootState.personalDetails.title}</h2>
+                    <div>
+                        <h1 id="name"><b>{this.props.rootState.personalDetails.name}</b></h1>
+                        <h2 id="jobTitle">{this.props.rootState.personalDetails.title}</h2>
+                    </div>
+                    
                     <div id="contactsContainer">
                         <div>{this.props.rootState.personalDetails.phone}</div>
                         <div>{this.props.rootState.personalDetails.email}</div>

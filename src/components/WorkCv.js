@@ -4,16 +4,16 @@ class WorkRender extends Component {
     render() {
         return (
             <div id="workInfoContainer">
-                <div id="workHeader">
-                    <div id="position">{this.props.rootState.experience.map((item) => (item.position))}</div>
+                <div id="workInfo">
+                    <div id="positionRender">{this.props.rootState.experience.map((item) => (item.position))}</div>
                     <div id="right">
-                        <div id="company">{this.props.rootState.experience.map((item) => (item.company))} | </div>
-                        <div id="time">
+                        <div id="companyRender">{this.props.rootState.experience.map((item) => (item.company))} | </div>
+                        <div id="educationTimeRender">
                             {this.props.rootState.experience.map((item) => (item.startDate))} - {this.props.rootState.experience.map((item) => (item.endDate))}
                         </div>
                     </div>
                 </div>
-                <div id="mainBody">{this.props.rootState.experience.map((item) => (item.workDescription))}</div>
+                <div id="workBody">{this.props.rootState.experience.map((item) => (item.workDescription))}</div>
             </div>
         )
     }

@@ -1,5 +1,42 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 #cvContainer {
     height: 842px;
     width: 595px;
     border: 1px solid black;
+    padding: 2em;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#name {
+    margin-bottom: 0;
+    color: rgb(64, 90, 155);
+}
+
+#jobTitle {
+    font-size: 20px;
+}
+
+#contactsContainer {
+    font-size: smaller;
+}
+
+#line1 {
+    border: 2px solid rgb(64, 90, 155);
+    border-radius: 5px;
+}
+
+#workHeader {
+    color:rgb(64, 90, 155);
+}
+
+#educationHeader {
+    color:rgb(64, 90, 155);
 }

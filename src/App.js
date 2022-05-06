@@ -13,36 +13,30 @@ class App extends Component {
       phone: '3018143358', 
       email: 'minchanjung1@gmail.com', 
       location: 'Bethesda, Maryland', 
-      description: ''},
-      experience: [{company: '', position: '', startDate: '', endDate: '', workDescription: ''}],
-      education: [{course: '', university: '', startDate: '', endDate: '', educationDescription: ''}]
+      description: 'Cupidatat sunt anim incididunt nisi labore sunt nulla Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Et deserunt et aliquip voluptate elit cupidatat. Adipisicing enim minim do anim eiusmod est. Irure laboris anim voluptate proident. Cillum reprehenderit est magna minim. Nostrud ex aute laborum ea irure amet ea ipsum ut non minim anim nisi.'},
+      experience: [{company: 'A Software Company', position: 'Software Engineer', startDate: '2020', endDate: 'Present', workDescription: 'Ut fugiat minim qui voluptate culpa. Elit nostrud ex ad incididunt incididunt eiusmod. Officia cupidatat culpa commodo nisi nostrud.'}],
+      education: [{course: 'CS50 Intro to Computer Science', university: 'Harvard University', startDate: '2016', endDate: '2017', educationDescription: 'al;sjf;alsj  asljf;sdvdl;shf lhafslhkvshaehwi slhkhvhweihew'}]
     }
 
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange = (e) => {
-    console.log(e.target)
-    this.setState({
-        [e.target.id]: e.target.value,
-    });
+    this.handleChangePersonal = this.handleChangePersonal.bind(this);
+    this.handleInputArrayChange = this.handleInputArrayChange.bind(this);
   }
 
   handleChangePersonal = (e) => {
-    const {id, value} = e.target;
+    const {name, value} = e.target;
 
     this.setState((prevState) => ({
       ...prevState, 
       personalDetails: {
         ...prevState.personalDetails, 
-        [id]: value
+        [name]: value
       }
     }))
   }
 
   handleInputArrayChange = (property, index) => {
     return (e) => {
-      const { id, value } = e.target;
+      const { name, value } = e.target;
 
       this.setState((prevState) => ({
         ...prevState,
@@ -50,7 +44,7 @@ class App extends Component {
           ...prevState[property].slice(0, index),
           {
             ...prevState[property][index],
-            [id]: value
+            [name]: value
           },
           ...prevState[property].slice(index + 1)
         ]
