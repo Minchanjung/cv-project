@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Boilerplate from './components/Boilerplate';
 import CvRender from './components/Cv';
-import uniqid from 'uniqid';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +14,8 @@ class App extends Component {
       email: 'minchanjung1@gmail.com', 
       location: 'Bethesda, Maryland', 
       description: ''},
-      experience: [{company: '', position: '', startDate: '', endDate: '', workDescription: ''}]
+      experience: [{company: '', position: '', startDate: '', endDate: '', workDescription: ''}],
+      education: [{course: '', university: '', startDate: '', endDate: '', educationDescription: ''}]
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -58,35 +58,12 @@ class App extends Component {
     };
   };
 
-  onClickRenderWork = () => {
-
-  }
-
-  handleExperienceItemAdd = () => {
-    const id = uniqid();
-    this.setState((prevState) => ({
-      ...prevState,
-      experience: [
-        prevState.experience, 
-        {
-          id, 
-          position: '', 
-          company: '', 
-          startDate: '', 
-          endDate: '', 
-          workDescription: '', 
-        }
-      ]
-    }))
-  }
-
   render() {
     return(
       <div id="container">
         <Boilerplate onInputChangePersonal={this.handleChangePersonal} onInputChange={this.handleInputArrayChange} rootState={this.state}/>
 
         <CvRender rootState={this.state}/>
-        <div>{this.state.experience[0].company}</div>
       </div>
     )
   }

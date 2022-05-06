@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from './Forms';
 import WorkForm from './WorkForm';
 import '../styles/Boilerplate.css';
+import EducationForm from './EducationForm';
 
 class Boilerplate extends Component {
 
@@ -12,10 +13,12 @@ class Boilerplate extends Component {
                 <Form onInputChange={this.props.onInputChangePersonal} rootState={this.props.rootState}/>
                 <h1 id="workInfo">Work Experience</h1>
                 <div id="workFormContainer">
-                    <WorkForm onInputChange={this.props.onInputChange} rootState={this.props.rootState}/>
+                    <WorkForm onInputChange={this.props.onInputChange('experience', 0)} rootState={this.props.rootState}/>
                 </div>
-                
-                <button id="newWorkTemplate">Add</button>
+                <h1 id="educationInfo">Education</h1>
+                <div id="educationFormContainer">
+                    <EducationForm onInputChange={this.props.onInputChange('education', 0)} rootState={this.props.rootState}/>
+                </div>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Cv.css';
+import EducationRender from './EducationCv';
 import WorkRender from './WorkCv';
 
 class CvRender extends Component {
@@ -20,9 +21,13 @@ class CvRender extends Component {
                 <div id="descriptionContainer">
                     <p id="description">{this.props.rootState.personalDetails.description}</p>
                 </div>
-                <h2 id="workExperience">Work Experience</h2>
+                <h2 id="workHeader">Work Experience</h2>
                 <div id="workContainer">
                     <WorkRender rootState={this.props.rootState}/>
+                </div>
+                <h2 id="educationHeader">Education</h2>
+                <div id="educationContainer">
+                    <EducationRender rootState={this.props.rootState}/>
                 </div>
             </div>
         )
