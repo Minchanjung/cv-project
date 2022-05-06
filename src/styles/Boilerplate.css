@@ -1,5 +1,36 @@
 #formContainer {
-    height: 842px;
-    width: 595px;
+    height: 100%;
+    width: 536px;
     border: 1px solid black;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#personalInfo {
+    font-size: medium;
+}
+
+#workInfo {
+    font-size: medium;
+}
+
+#educationInfo {
+    font-size: large;
 }
