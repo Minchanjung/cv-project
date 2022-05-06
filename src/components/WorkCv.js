@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/WorkCv.css'
 
 class WorkRender extends Component {
     render() {

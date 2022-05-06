@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/EducationCv.css'
 
 class EducationRender extends Component {
     render() {
@@ -13,7 +14,7 @@ class EducationRender extends Component {
                         </div>
                     </div>
                 </div>
-                <div id="EducationBody">{this.props.rootState.education.map((item) => (item.educationDescription))}</div>
+                <div id="educationBody">{this.props.rootState.education.map((item) => (item.educationDescription))}</div>
             </div>
         )
     }

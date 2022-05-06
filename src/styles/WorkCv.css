@@ -1,0 +1,15 @@
+#workInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+#positionRender {
+    font-weight: bold;
+}
+
+#right {
+    display: flex;
+    font-weight: bold;
+    font-size: smaller;
+}

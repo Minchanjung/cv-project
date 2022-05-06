@@ -2,6 +2,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    padding: 2em;
+}
+
 #cvContainer {
     height: 842px;
     width: 595px;

@@ -1,0 +1,15 @@
+#educationInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+#courseRender {
+    font-weight: bold;
+}
+
+#right {
+    display: flex;
+    font-weight: bold;
+    font-size: smaller;
+}
