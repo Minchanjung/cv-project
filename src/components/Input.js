@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Inputs extends Component {
+/*class Inputs extends Component {
 
     render() {
         return (
@@ -10,6 +10,15 @@ class Inputs extends Component {
             </div>
         )
     }
+}*/
+
+const Inputs = (props) => {
+    return (
+        <div>
+            <label htmlFor={props.id}>{props.id}</label>
+            <input name={props.name} id={props.id} className={props.class} onChange={props.handleOnChnage} value={props.val} type="text"></input>
+        </div>
+    )
 }
 
 export default Inputs

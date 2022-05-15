@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import './App.css';
 import Boilerplate from './components/Boilerplate';
 import CvRender from './components/Cv';
 
-class App extends Component {
+/*class App extends Component {
   constructor(props) {
     super(props);
 
@@ -61,6 +61,36 @@ class App extends Component {
       </div>
     )
   }
+}*/
+
+const App = (props) => {
+  const [personal, setPersonal] = useState({name: 'Minchan Jung', title: 'Software Engineer', phone: '3018143358', email: 'minchanjung1@gmail.com', location: 'Bethesda, Maryland', 
+                                            description: 'Cupidatat sunt anim incididunt nisi labore sunt nulla Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Et deserunt et aliquip voluptate elit cupidatat. Adipisicing enim minim do anim eiusmod est. Irure laboris anim voluptate proident. Cillum reprehenderit est magna minim. Nostrud ex aute laborum ea irure amet ea ipsum ut non minim anim nisi.'});
+
+  const [experience, setExperience] = useState({company: 'A Software Company', position: 'Software Engineer', startDate: '2020', endDate: 'Present', workDescription: 'Ut fugiat minim qui voluptate culpa. Elit nostrud ex ad incididunt incididunt eiusmod. Officia cupidatat culpa commodo nisi nostrud.'});
+
+  const [education, setEducation] = useState({course: 'CS50 Intro to Computer Science', university: 'Harvard University', startDate: '2016', endDate: '2017', educationDescription: 'al;sjf;alsj  asljf;sdvdl;shf lhafslhkvshaehwi slhkhvhweihew'});
+
+  const handleChange = (property, setProperty) => {
+    return (e) => {
+      const {name, value} = e.target;
+
+      setProperty(() => ({
+        ...property,
+        [name]: value,
+
+      }))
+    }
+    
+  }
+
+  return (
+    <div id="container">
+      <Boilerplate onInputChange={handleChange} personalState={personal} experienceState={experience} educationState={education} setPersonal={setPersonal} setEducation={setEducation} setExperience={setExperience}/>
+
+      <CvRender personalState={personal} experienceState={experience} educationState={education} setPersonal={setPersonal} setEducation={setEducation} setExperience={setExperience}/>
+    </div>
+  )
 }
 
 export default App;

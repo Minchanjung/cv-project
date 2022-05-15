@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/EducationCv.css'
 
-class EducationRender extends Component {
+/*class EducationRender extends Component {
     render() {
         return (
             <div id="educationInfoContainer">
@@ -18,6 +18,23 @@ class EducationRender extends Component {
             </div>
         )
     }
+}*/
+
+const EducationRender = (props) => {
+    return (
+        <div id="educationInfoContainer">
+            <div id="educationInfo">
+                <div id="courseRender">{props.educationState.course}</div>
+                <div id="right">
+                    <div id="universityRender">{props.educationState.university} | </div>
+                    <div id="educationTimeRender">
+                        {props.educationState.startDate} - {props.educationState.endDate}
+                    </div>
+                </div>
+            </div>
+            <div id="educationBody">{props.educationState.educationDescription}</div>
+        </div>
+    )
 }
 
 export default EducationRender;

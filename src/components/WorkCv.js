@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import '../styles/WorkCv.css'
 
-class WorkRender extends Component {
+/*class WorkRender extends Component {
     render() {
         return (
             <div id="workInfoContainer">
@@ -18,6 +18,23 @@ class WorkRender extends Component {
             </div>
         )
     }
+}*/
+
+const WorkRender = (props) => {
+    return (
+        <div id='workInfoContainer'>
+            <div id="workInfo">
+                <div id="positionRender">{props.experienceState.position}</div>
+                <div id="right">
+                    <div id="companyRender">{props.experienceState.company} | </div>
+                    <div id="educationTimeRender">
+                        {props.experienceStatestartDate} - {props.experienceState.endDate}
+                    </div>
+                </div>
+            </div>
+            <div id="workBody">{props.experienceState.workDescription}</div>
+        </div>
+    )
 }
 
 export default WorkRender;

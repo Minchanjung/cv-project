@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Inputs from './Input';
 
-class WorkForm extends Component {
+/*class WorkForm extends Component {
 
     render() {
         return (
@@ -14,6 +14,18 @@ class WorkForm extends Component {
             </form>
         )
     };
+}*/
+
+const WorkForm = (props) => {
+    return (
+        <form>
+            <Inputs id="companyInput" name="company" class="companyInput" label="Company:  " handleOnChange={props.onInputChange} val={props.experienceState.company}/>
+            <Inputs id="positonInput" name="position" class="positionInput" label="Position:  " handleOnChange={props.onInputChange} val={props.experienceState.position}/>
+            <Inputs id="workStartDateInput" name="startDate" class="startDateInput" label="Start Date:  " handleOnChange={props.onInputChange} val={props.experienceState.startDate}/>
+            <Inputs id="workEndDateInput" name="endDate" class="endDateInput" label="End Date:  " handleOnChange={props.onInputChange} val={props.experienceState.endDate}/>
+            <Inputs id="workDescriptionInput" name="workDescription" class="workDescriptionInput" label="Description:  " handleOnChange={props.experienceState.workDescription}/>
+        </form>
+    )
 }
 
 export default WorkForm;
