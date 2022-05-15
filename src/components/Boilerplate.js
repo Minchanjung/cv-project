@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Form from './Forms';
 import WorkForm from './WorkForm';
 import '../styles/Boilerplate.css';

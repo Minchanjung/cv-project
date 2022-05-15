@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Boilerplate from './components/Boilerplate';
 import CvRender from './components/Cv';
@@ -71,9 +71,14 @@ const App = (props) => {
 
   const [education, setEducation] = useState({course: 'CS50 Intro to Computer Science', university: 'Harvard University', startDate: '2016', endDate: '2017', educationDescription: 'al;sjf;alsj  asljf;sdvdl;shf lhafslhkvshaehwi slhkhvhweihew'});
 
+  console.log(personal);
+  console.log(setPersonal);
+
   const handleChange = (property, setProperty) => {
     return (e) => {
       const {name, value} = e.target;
+      console.log(name);
+      console.log(value)
 
       setProperty(() => ({
         ...property,
@@ -81,14 +86,13 @@ const App = (props) => {
 
       }))
     }
-    
   }
 
   return (
     <div id="container">
       <Boilerplate onInputChange={handleChange} personalState={personal} experienceState={experience} educationState={education} setPersonal={setPersonal} setEducation={setEducation} setExperience={setExperience}/>
 
-      <CvRender personalState={personal} experienceState={experience} educationState={education} setPersonal={setPersonal} setEducation={setEducation} setExperience={setExperience}/>
+      <CvRender personalState={personal} experienceState={experience} educationState={education}/>
     </div>
   )
 }

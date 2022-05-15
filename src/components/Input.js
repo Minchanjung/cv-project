@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 /*class Inputs extends Component {
 
@@ -15,8 +15,8 @@ import React, { Component } from 'react';
 const Inputs = (props) => {
     return (
         <div>
-            <label htmlFor={props.id}>{props.id}</label>
-            <input name={props.name} id={props.id} className={props.class} onChange={props.handleOnChnage} value={props.val} type="text"></input>
+            <label htmlFor={props.id}>{props.label}</label>
+            <input name={props.name} id={props.id} className={props.class} onChange={props.handleOnChange} value={props.val} type="text"></input>
         </div>
     )
 }

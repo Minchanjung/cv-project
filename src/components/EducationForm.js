@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Inputs from './Input';
 
 /*class EducationForm extends Component {

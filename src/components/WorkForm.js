@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Inputs from './Input';
 
 /*class WorkForm extends Component {
@@ -23,7 +23,7 @@ const WorkForm = (props) => {
             <Inputs id="positonInput" name="position" class="positionInput" label="Position:  " handleOnChange={props.onInputChange} val={props.experienceState.position}/>
             <Inputs id="workStartDateInput" name="startDate" class="startDateInput" label="Start Date:  " handleOnChange={props.onInputChange} val={props.experienceState.startDate}/>
             <Inputs id="workEndDateInput" name="endDate" class="endDateInput" label="End Date:  " handleOnChange={props.onInputChange} val={props.experienceState.endDate}/>
-            <Inputs id="workDescriptionInput" name="workDescription" class="workDescriptionInput" label="Description:  " handleOnChange={props.experienceState.workDescription}/>
+            <Inputs id="workDescriptionInput" name="workDescription" class="workDescriptionInput" label="Description:  " handleOnChange={props.onInputChange} val={props.experienceState.workDescription}/>
         </form>
     )
 }
